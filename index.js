@@ -13,7 +13,7 @@ app.use(morgan('dev'))
 app.use('/api/v1/projects', projectRoutes)
 app.use('/api/v1/auth', authRoutes)
 
-app.get('health', (req, res) => {
+app.get('/health', (req, res) => {
     res.json({
         status: 'ok',
         env: process.env.NODE_ENV,
